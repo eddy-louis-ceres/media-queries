@@ -1,0 +1,11 @@
+@media screen and (min-width:365px) and (max-width:1192px){
+
+    .alert-info {
+        border: 1px solid lightgray;
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+}
