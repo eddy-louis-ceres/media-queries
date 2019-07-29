@@ -80,9 +80,12 @@
         }
         .nav-links li {
             background: white;
+            display: flex;
+            justify-content: flex-end;
         }
-        img {
+        .header-img {
             grid-area: picture;
+            margin: auto;
         }
 
         .main {
