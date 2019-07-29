@@ -1,9 +1,8 @@
-@media screen and (min-width:365px) and (max-width:1192px) {
+
 
     .alert-info a {
         text-decoration: none;
     }
-
     .alert-info {
         border: 1px solid lightgray;
         display: flex;
@@ -11,30 +10,22 @@
         height: 1em;
         padding: 1em;
         background-color: #CEFFFF;
-
-
     }
     .main {
         text-decoration: none;
         font-weight: bold;
         font-size: large;
-
     }
-
     body {
         grid-template-rows: repeat(3, 1fr) 4.5em 5em 1fr;
         font-family: 'Roboto', sans-serif;
-
     }
     h1 {
         display: flex;
         justify-content: center;
         font-weight: bold;
         font-size: 3em;
-        margin: 0 auto;
-        padding-bottom: .2em;
-        padding-top: .1em;
-
+        margin: .2em 0;
     }
     .nav-links {
         display: flex;
@@ -42,7 +33,6 @@
         flex-direction: column;
         list-style: none;
         padding-left: 0;
-
     }
     .nav-links li{
         padding:1em;
@@ -55,24 +45,63 @@
         display: flex;
         width: 100%;
         height: auto;
-        /*padding: 0 8px;*/
-
-
     }
     h2 {
         margin-bottom: 1px;
     }
-
     .sub-section {
         font-size: large;
         font-style: italic;
         font-weight: bold;
-
         padding-top: .5em;
     }
 
     footer{
         margin-top: 5em;
     }
-}
 
+    @media screen and (min-width:1200px) {
+        body {
+            display: grid;
+            grid-template-rows: 1fr 40% 40% 1fr;
+            grid-template-columns: 60% 40%;
+            grid-template-areas: "header nav" "picture picture" "main sub" "footer social";
+        }
+        h1 {
+            grid-area: header;
+            display: block;
+        }
+
+        .nav-links {
+            grid-area: nav;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+        }
+        .nav-links li {
+            background: white;
+        }
+        img {
+            grid-area: picture;
+        }
+
+        .main {
+            grid-area: main;
+        }
+
+        .sub-section {
+            grid-area: sub;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        #social-media-links {
+            grid-area: social;
+        }
+
+        .alert-info {
+            display: none;
+        }
+    }
