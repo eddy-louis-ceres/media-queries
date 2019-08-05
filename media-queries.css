@@ -90,10 +90,13 @@
 
         .main {
             grid-area: main;
+            display: flex;
+            justify-content: center;
         }
 
         .sub-section {
             grid-area: sub;
+            align-content: center;
         }
 
         footer {
